@@ -57,7 +57,7 @@ async function formatPrompt(content) {
   const timeout = setTimeout(() => controller.abort(), 30000);
 
   try {
-    const response = await fetch("https://yuanplus.chat/v1/chat/completions", {
+    const response = await fetch("https://aiubmix.com/v1/chat/completions", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
