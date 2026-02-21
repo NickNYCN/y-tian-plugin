@@ -1413,7 +1413,7 @@ async function YTapi(messages, model) {
   const data = JSON.parse(await fs.promises.readFile(dataPath, "utf-8"));
   const token = data.chatgpt.stoken;
   try {
-    const url = 'https://yuanplus.cloud/v1/';
+    const url = 'https://aiubmix.com/v1/';
     const responseData = await OpenAiChatCmpletions(url, token, model, messages);
     if (responseData.error) {
       return responseData.error;
@@ -1431,7 +1431,7 @@ async function YTapi(messages, model) {
 
 async function UserAuth(token) {
   try {
-    const url = 'https://yuanplus.cloud/v1/chat/completions';
+    const url = 'https://aiubmix.com/v1/chat/completions';
     const data = {
       "model": "test-1",
       "stream": false,
