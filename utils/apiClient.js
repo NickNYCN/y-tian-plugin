@@ -43,7 +43,7 @@ export async function YTapi(requestData, config, toolContent, toolName) {
         } else if (provider === 'oneapi') {
             if (config.UseTools) {
                 // UseTools 开启，先调用 OpenAI API
-                const openaiUrl = 'https://yuanplus.cloud/v1/chat/completions';
+                const openaiUrl = 'https://aiubmix.com/v1/chat/completions';
                 // 确保使用OpenAiModel的模型
                 if (!data.chatgpt?.stoken) return { error: "OpenAI stoken is not configured" };
 
@@ -147,7 +147,7 @@ export async function YTapi(requestData, config, toolContent, toolName) {
             }
         } else if (provider === 'openai') {
             url = config.OpenAiUrl;
-            const openAiApiKey = url === 'https://yuanplus.cloud/v1/chat/completions'
+            const openAiApiKey = url === 'https://aiubmix.com/v1/chat/completions'
                 ? data.chatgpt.stoken
                 : config.OpenAiApikey;
             if (!openAiApiKey) return { error: "OpenAI API Key is not configured" };
