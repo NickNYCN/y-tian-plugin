@@ -88,7 +88,7 @@ async function YTapi(messages, tools) {
     const data = JSON.parse(await fs.promises.readFile(dataPath, "utf-8"));
     const token = data.chatgpt.stoken;
 
-    const url = 'https://yuanplus.cloud/v1/chat/completions';
+    const url = 'https://aiubmix.com/v1/chat/completions';
     const requestData = {
       model: "gpt-4o-mini",
       messages: [{
@@ -168,7 +168,7 @@ export async function SearchMessages(messages) {
     if (!key) { 
       return messages; 
     }
-    const url = 'https://yuanplus.cloud/v1/chat/completions';
+    const url = 'https://aiubmix.com/v1/chat/completions';
     const q = await SearchTools(messages);
     console.log(key)
     if (!q.query || !q.url) { 
